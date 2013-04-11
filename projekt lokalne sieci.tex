@@ -125,7 +125,62 @@ Wymagania użytkowników zostaną opracowane na podstawie danych przekazanych pr
 z samymi pracownikami. Przepustowości łącz w nowej instalacji zostaną oszacowane na podstawie danych z obecnie istniejącej sieci komputerowej.
 
 \chapter{Inwentaryzacja sprzętu i infrastruktury dostępnej w przedsiębiorstwie}
+Na podstawie udostępnionej dokumentacji oraz wizyt w budnyku mieszczącym firmę opracowano zestawienie zasobów obecnie posiadanych przez firmę.
+W obecnej architekturze sieciowej razem w obu budynkach znajduje się 225 gniazdek ethernetowych. Całe obecne okablowanie wykonane jest 
+za pomocą nieekranowanej skętki w kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
+bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare.
+
+Wszystkie komputery PC oraz inne urządzenia przyłączone do sieci posiadają interfejsy sieciowe ethernet i spełaniają wymagania niezbędne
+do połączenia do nowej sieci. Spis programów używanych w firmie:
+\begin{enumerate}
+ \item system operacyjny Windows XP
+ \item przeglądarka Firefox
+ \item program pocztowy Thundebird
+ \item skype dla firm
+ \item edytor tekstu Microsoft Office
+ \item klient NetWare
+ \item ssh
+ \item TeamViever
+ \item program księgowo kadrowy Płatnik
+\end{enumerate}
+
+Dodatkowo każdy dział ma dodatkowe oprogramowanie specyficzne dla funkcji jaką pełni. Specyfikacja ta zostanie sprecyzowana w następnym rozdziale.
+
+Budynki w których firma ma swoją siedzibę to nowoczesne biurowce. Wynajmujący piętro sam zagospodarowuje większość 
+znajdującej się tam przestrzeni za pomocą modułowej architektury boxów. Aby umożliwić dużą elestyczność konfiguracji przestrzennej piętra 
+wyposażone są w podwieszane sufity w których poprowadzono jest większość instalacji. Właśnie pod kątem tego montażu zostanie zaprojektowany plan
+okablowania.
+
+Sieć energetyczna zainstalowana w budynku spełnia wszelkie wymagania dotyczące bezpieczeństwa oraz wydajności wymaganej dla sieci komputerowej.
+Warte odnotowania jest obeność instalacji piorunochronowej na obu budynkach. Znacząco zwiększa to bezpieczeństow sprzętów elektronicznych zainstalowanych
+w budynku.
+
+Zakłócenia elektomagnetyczne w budyku są na tyle małe, że można je pominąć. W okolicy nie pracuje żaden duży zakaład przemysłowy, który mógłby 
+znacząco wpłynąć na parametry zasilania w sieci. Inne firmy, które prowadzą swoją działalność w tych budynkach korzystają jedynie z standardowego
+sprzętu birurowego połączonego kablową siecią ethernetową. Brak innych sieci bezprzewodowych w budynkach znacząco ułatwia implementacje sieci wifi
+ponieważ nie występuje problem interferencji międzykanałowych.
+
+%Trzba dodać orientacyjne oszacowanie ilości sprzętu.
+
+%Z umieszczeniem tych planów to trzeba się jeszcze zastanowić.
+\pagebreak[4]
+Plany budynków znajdują się w załączniku A. Wzajemne rozmieszczenie budynków przezentuje poniższy rysunek.
+
+%rysunek trzba poprawić
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.8\textwidth]{./obrazki/rozmieszczenie_budynkow.jpeg}
+  \caption{Wzajemne rozmieszczenie budynków.}
+\end{figure}
+
+
+
 \chapter{Analiza potrzeb użytkowników – wymagania zamawiającego}
+Na podstawie danych dostarczonych przez administratora obecnej sieci powstała analiza wykorzystania łącz. Przedstawiają ją poniższe tabele:
+
+%tabele
+
+
 \chapter{Założenia projektowe}
 \chapter{Projekt sieci}
 \section{Projekt logiczny sieci wraz z opisem koncepcji rozwiązania}
