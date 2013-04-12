@@ -125,12 +125,12 @@ Wymagania użytkowników zostaną opracowane na podstawie danych przekazanych pr
 z samymi pracownikami. Przepustowości łącz w nowej instalacji zostaną oszacowane na podstawie danych z obecnie istniejącej sieci komputerowej.
 
 \chapter{Inwentaryzacja sprzętu i infrastruktury dostępnej w przedsiębiorstwie}
-Na podstawie udostępnionej dokumentacji oraz wizyt w budnyku mieszczącym firmę opracowano zestawienie zasobów obecnie posiadanych przez firmę.
+Na podstawie udostępnionej dokumentacji oraz wizyt w budynku mieszczącym firmę opracowano zestawienie zasobów obecnie posiadanych przez firmę.
 W obecnej architekturze sieciowej razem w obu budynkach znajduje się 225 gniazdek ethernetowych. Całe obecne okablowanie wykonane jest 
-za pomocą nieekranowanej skętki w kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
+za pomocą nieekranowanej skrętki w kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
 bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare.
 
-Wszystkie komputery PC oraz inne urządzenia przyłączone do sieci posiadają interfejsy sieciowe ethernet i spełaniają wymagania niezbędne
+Wszystkie komputery PC oraz inne urządzenia przyłączone do sieci posiadają interfejsy sieciowe ethernet i spełniają wymagania niezbędne
 do połączenia do nowej sieci. Spis programów używanych w firmie:
 \begin{enumerate}
  \item system operacyjny Windows XP
@@ -147,17 +147,17 @@ do połączenia do nowej sieci. Spis programów używanych w firmie:
 Dodatkowo każdy dział ma dodatkowe oprogramowanie specyficzne dla funkcji jaką pełni. Specyfikacja ta zostanie sprecyzowana w następnym rozdziale.
 
 Budynki w których firma ma swoją siedzibę to nowoczesne biurowce. Wynajmujący piętro sam zagospodarowuje większość 
-znajdującej się tam przestrzeni za pomocą modułowej architektury boxów. Aby umożliwić dużą elestyczność konfiguracji przestrzennej piętra 
+znajdującej się tam przestrzeni za pomocą modułowej architektury boxów. Aby umożliwić dużą elastyczność konfiguracji przestrzennej piętra 
 wyposażone są w podwieszane sufity w których poprowadzono jest większość instalacji. Właśnie pod kątem tego montażu zostanie zaprojektowany plan
 okablowania.
 
 Sieć energetyczna zainstalowana w budynku spełnia wszelkie wymagania dotyczące bezpieczeństwa oraz wydajności wymaganej dla sieci komputerowej.
-Warte odnotowania jest obeność instalacji piorunochronowej na obu budynkach. Znacząco zwiększa to bezpieczeństow sprzętów elektronicznych zainstalowanych
+Warte odnotowania jest obecność instalacji piorunochronowej na obu budynkach. Znacząco zwiększa to bezpieczeństwo sprzętów elektronicznych zainstalowanych
 w budynku.
 
-Zakłócenia elektomagnetyczne w budyku są na tyle małe, że można je pominąć. W okolicy nie pracuje żaden duży zakaład przemysłowy, który mógłby 
+Zakłócenia elektromagnetyczne w budynku są na tyle małe, że można je pominąć. W okolicy nie pracuje żaden duży zakład przemysłowy, który mógłby 
 znacząco wpłynąć na parametry zasilania w sieci. Inne firmy, które prowadzą swoją działalność w tych budynkach korzystają jedynie z standardowego
-sprzętu birurowego połączonego kablową siecią ethernetową. Brak innych sieci bezprzewodowych w budynkach znacząco ułatwia implementacje sieci wifi
+sprzętu biurowego połączonego kablową siecią ethernetową. Brak innych sieci bezprzewodowych w budynkach znacząco ułatwia implementacje sieci wifi
 ponieważ nie występuje problem interferencji międzykanałowych.
 
 %Trzba dodać orientacyjne oszacowanie ilości sprzętu.
@@ -180,32 +180,32 @@ Na podstawie danych dostarczonych przez administratora obecnej sieci powstała a
 
 %tabele
 
-Wszyscy użytkowicy sieci korzystają z następujących programów: klient NetWare,Thundebird, Firefox, Microsoft Office oraz skype. Dodatkowo występuje 
+Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetWare,Thundebird, Firefox, Microsoft Office oraz Skype. Dodatkowo występuje 
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
-do zdalenego zarządzania innymi komputerami TeamViever oraz ssh.
+do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
-Firama w najbliższym czasie planuje zakup dodatkowych 4 drukarek siecowych.Po jednej dodatkowej na każde piętro.
-W związku tymi planami należy zwiększyć liczbę gniazdek ethenetowych w instalacji do 229.
+Firma w najbliższym czasie planuje zakup dodatkowych 4 drukarek sieciowych.Po jednej dodatkowej na każde piętro.
+W związku tymi planami należy zwiększyć liczbę gniazdek ethernetowych w instalacji do 229.
 
-Firma w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdlanego
+Firma w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
 
-Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przpustowośći 0,5 Mb/s do pobierania oraz
+Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
 1 Mb/s do wysyłania. Wartości te będą uwzględnione dla wymagań dotyczących łącza internetowego.
 
 Codziennie od godziny 24:00 do 6:00 rano wykonywany jest backup bazy danych klientów. Aby został poprawnie wykonany wymagana jest przepustowość 
 na poziomie 3 Mb/s. Ponieważ czynność ta wykonywana jest w nocy wymaganie to będzie na pewno spełnione gdyż pracownicy nie będą generować ruchu
 sieciowego.
 
-Klient wyraził zapotrzbowanie na instalację sieci wifi dla działu obsługującego przetsiębiorców. W sali konferencyjnej często dochodzi  
-do spotkań z klientami oraz małych narad zarządu. Wygodny dostęp dla intenetu na pewno byłby czynnikiem ułatwiającym wszelkie negocjacje.
+Klient wyraził zapotrzebowanie na instalację sieci wifi dla działu obsługującego przedsiębiorców. W sali konferencyjnej często dochodzi  
+do spotkań z klientami oraz małych narad zarządu. Wygodny dostęp dla internetu na pewno byłby czynnikiem ułatwiającym wszelkie negocjacje.
 Niestety nie można przewidzieć zapotrzebowania na pasmo dla tego elementu sieci ponieważ nie wiadomo jaki program zechce uruchomić użytkownik.
 Nie jest to obciążenie ciągłe sieci więc odpowiedni zapas przepustowości w powinien rozwiązać ten problem.
 
-Na podstawie zebranych danych można postawić wymagania dotyczące przpustowości sieci lokalnej oraz łącza z intenetowego. Poniższa tabela
-prezentuje wymagania minimalne oraz zalecane. Wymagania minimalne zawierają wartości parametrów niezbędych do poprawnego działania sieci. 
-Niestety gdyby ich użyć mogłyby wystąpić problemy z jakością usług gdyby jakiś program przeciążył sieć. Aby tego uniknąć należy użyć wartośći
-zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapasem przepustowości sieć będzie odporana na większość przeciążeń.
+Na podstawie zebranych danych można postawić wymagania dotyczące przepustowości sieci lokalnej oraz łącza z internetowego. Poniższa tabela
+prezentuje wymagania minimalne oraz zalecane. Wymagania minimalne zawierają wartości parametrów niezbędnych do poprawnego działania sieci. 
+Niestety gdyby ich użyć mogłyby wystąpić problemy z jakością usług gdyby jakiś program przeciążył sieć. Aby tego uniknąć należy użyć wartości
+zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapasem przepustowości sieć będzie odporna na większość przeciążeń.
 
 %tabelka
 
