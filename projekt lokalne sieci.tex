@@ -138,8 +138,8 @@ do połączenia do nowej sieci. Spis programów używanych w firmie:
 \begin{enumerate}
  \item system operacyjny Windows XP
  \item przeglądarka Firefox
- \item program pocztowy Thundebird
- \item skype dla firm
+ \item program pocztowy Thunderbird
+ \item Skype dla firm
  \item edytor tekstu Microsoft Office
  \item klient NetWare
  \item ssh
@@ -195,25 +195,26 @@ ponieważ nie występuje problem interferencji międzykanałowych.
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.5\textwidth]{./obrazki/rzut_terenowy.png}
-    \caption{Wzajmne rozmieszczenie budynków na mapie.}
+    \caption{Wzajemne rozmieszczenie budynków na mapie.}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/rozmieszczenie_budynkow.jpeg}
-    \caption{Wzajmne rozmieszczenie schemat.}
+    \caption{Wzajemne rozmieszczenie schemat.}
 \end{figure}
 
 
 
 \chapter{Analiza potrzeb użytkowników – wymagania zamawiającego}
-Na podstawie danych dostarczonych przez firmowego administratora sieci sporządzono analize ruchu sieciowego. Przedstawiają je tabela 
+Na podstawie danych dostarczonych przez firmowego administratora sieci sporządzono analizie ruchu sieciowego jaki wytwarzają
+pracownicy w ciągu dnia roboczego. Przedstawiają je tabela 
 \ref{tab:analiza dzialy} oraz \ref{tab:analiza podsumowanie}.
 
 \begin{table}
 
 \centering
-\caption{Analiza wykorzystania łącz \label{tab:analiza dzialy}}
+\caption{Analiza ruchu sieciowego w poszczególnych departamentach. \label{tab:analiza dzialy}}
 
 \includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_ok.png}
 \includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_k.png}
@@ -227,7 +228,7 @@ Na podstawie danych dostarczonych przez firmowego administratora sieci sporządz
 \begin{table}
 
 \centering
-\caption{Posumowanie wykorzystania łącz \label{tab:analiza podsumowanie}}
+\caption{Podsumowanie generowanego ruchu. \label{tab:analiza podsumowanie}}
 
 \includegraphics[width=0.6\textwidth]{./obrazki/ruch_tabele/budynki.png}
 
@@ -240,7 +241,7 @@ Na podstawie danych dostarczonych przez firmowego administratora sieci sporządz
 
 
 
-Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetWare,Thundebird, Firefox, Microsoft Office oraz Skype. Dodatkowo występuje 
+Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetWare,Thunderbird, Firefox, Microsoft Office oraz Skype. Dodatkowo występuje 
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
 do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
@@ -269,7 +270,7 @@ zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapase
 
 
 \begin{table}
-\caption{Przepustowości łacza internetowego }
+\caption{Przepustowości łącza internetowego. }
 \label{tab:parametry_loncza}
  \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/ruch_tabele/loncze.png}
@@ -287,32 +288,25 @@ następujące rozwiązania:
 
 \item{technologia Fast Ethernet wykorzystana w okablowaniu poziomym}
 
-\item{asymetryczne łącze z dostępem do Internetu o przepustowości ?? muszę policzyć}
+\item{symetryczne łącze z dostępem do Internetu o przepustowości 40 Mb/s}
 
 \item{strukturę sieci oddzielającą serwery lokalne od zewnętrznych:
  \begin{itemize}
 \item serwer WWW,
 \item serwer Intranet,
 \item serwer bazy danych,
-%\item centrala PBX.
 \end{itemize}}
 
 \item {użycie kabla UTP z kategorii 6,}
 
 \item {urządzenia kompatybilne z IPv6 (router’y, switch’e, serwery),}
 
-\item{dedykowane urządzenia pod telefonię VoIP;
-W zależności od budżetu: telefony z możliwością przełączania (podłączenie
-komputera) lub bez tej możliwości (potrzeba zakupienia większej ilości
-przełączników)}
-
-\item{telefonia VoIP oparta na kodeku G.729 z priorytetyzowaniem pakietów w celu
-utrzymania odpowiedniego QoS,}
+\item {urządzenia obsługujące technologię QoS}
 
 \item{technologię VLAN w celu odseparowania jednostek organizacyjnych firmy}
 
-\item{ezprzewodowy dostęp do sieci w dziale obługi klienta biznesowego w technologii WiFi
-802.11g}
+\item{bezprzewodowy dostęp do sieci w dziale obługi klienta biznesowego w technologii WiFi
+802.11n na częstotliwości 2,4Ghz}
 
 \item{bezpieczeństwo sieci zapewnione sprzętowym firewall’em}
 
