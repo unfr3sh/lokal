@@ -72,6 +72,8 @@
 
 \title{}
 
+\sloppy
+
 \begin{document}
 
 \maketitle
@@ -205,9 +207,38 @@ ponieważ nie występuje problem interferencji międzykanałowych.
 
 
 \chapter{Analiza potrzeb użytkowników – wymagania zamawiającego}
-Na podstawie danych dostarczonych przez administratora obecnej sieci powstała analiza wykorzystania łącz. Przedstawiają ją poniższe tabele:
+Na podstawie danych dostarczonych przez firmowego administratora sieci sporządzono analize ruchu sieciowego. Przedstawiają je tabela 
+\ref{tab:analiza dzialy} oraz \ref{tab:analiza podsumowanie}.
 
-%tabele
+\begin{table}
+
+\centering
+\caption{Analiza wykorzystania łącz \label{tab:analiza dzialy}}
+
+\includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_ok.png}
+\includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_k.png}
+\includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_kad.png}
+\includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_b.png}
+\includegraphics[width=0.5\textwidth]{./obrazki/ruch_tabele/d_m.png}   
+
+\end{table}
+
+
+\begin{table}
+
+\centering
+\caption{Posumowanie wykorzystania łącz \label{tab:analiza podsumowanie}}
+
+\includegraphics[width=0.6\textwidth]{./obrazki/ruch_tabele/budynki.png}
+
+\hspace{0,5cm}
+
+      \includegraphics[width=0.6\textwidth]{./obrazki/ruch_tabele/podsumowanie.png}     
+ 
+\end{table}
+
+
+
 
 Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetWare,Thundebird, Firefox, Microsoft Office oraz Skype. Dodatkowo występuje 
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
@@ -231,12 +262,18 @@ do spotkań z klientami oraz małych narad zarządu. Wygodny dostęp dla interne
 Niestety nie można przewidzieć zapotrzebowania na pasmo dla tego elementu sieci ponieważ nie wiadomo jaki program zechce uruchomić użytkownik.
 Nie jest to obciążenie ciągłe sieci więc odpowiedni zapas przepustowości powinien rozwiązać ten problem.
 
-Na podstawie zebranych danych można postawić wymagania dotyczące przepustowości sieci lokalnej oraz łącza z internetowego. Poniższa tabela
+Na podstawie zebranych danych można postawić wymagania dotyczące przepustowości sieci lokalnej oraz łącza z internetowego. Tabela \ref{tab:parametry_loncza}
 prezentuje wymagania minimalne oraz zalecane. Wymagania minimalne zawierają wartości parametrów niezbędnych do poprawnego działania sieci. 
 Niestety gdyby ich użyć mogłyby wystąpić problemy z jakością usług gdyby jakiś program przeciążył sieć. Aby tego uniknąć należy użyć wartości
 zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapasem przepustowości sieć będzie odporna na większość przeciążeń.
 
-%tabelka
+
+\begin{table}
+\caption{Przepustowości łacza internetowego }
+\label{tab:parametry_loncza}
+ \centering
+      \includegraphics[width=0.8\textwidth]{./obrazki/ruch_tabele/loncze.png}
+\end{table}
 
 
 \chapter{Założenia projektowe}
