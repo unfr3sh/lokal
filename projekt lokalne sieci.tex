@@ -101,7 +101,7 @@ może nastąpić tylko z sieci firmowej. Aby zwiększyć bezpieczeństwo każde 
 za połączone za pomocą kabla UTP. Obostrzenia te spowodowane są obawą przed podsłuchaniem poufnych informacji przez osoby niepowołane oraz
 przejęciem kontroli nad komputerem klienta podszywając się pod pracownika firmy z innej lokacji.
 
-ComputerBudy wynajmuje łącznie 4 piętra w dwóch bliźniaczych budynkach stojących obok siebie.W pierwszym dwa i w następnym budynku kolejne dwa.
+ComputerBudy wynajmuje łącznie 5 pięter w dwóch bliźniaczych budynkach stojących obok siebie.W pierwszym dwa i w następnym budynku kolejne 3.
 Pozostałe piętra wynajmują inne firmy.
 
 Celem naszej pracy jest stworzenie projektu nowej instalacji teleinformatycznej na użytkowanych przez firmę piętrach w obu budynkach. Zakres projektu:
@@ -130,8 +130,10 @@ z samymi pracownikami. Przepustowości łącz w nowej instalacji zostaną oszaco
 Na podstawie udostępnionej dokumentacji oraz wizyt w budynku mieszczącym firmę opracowano zestawienie zasobów obecnie posiadanych przez firmę.
 W obecnej architekturze sieciowej razem w obu budynkach znajduje się 290 gniazdek ethernetowych. Nie wszystkie są obecnie używane.
 Całe obecne okablowanie wykonane jest za pomocą nieekranowanej skrętki kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
-bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare. Pomieszczenie z serwerem posiada
-odzielną klimatyzacje oraz jest dobrze zabezpieczone przed niepowołanym fizycznym dostępem.
+bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare. Znajduje się on w
+pomieszczeniu nr 11 w budynku A. Pokój ten jest specjalnie przystosowany, posiada oddzielną klimatyzacje oraz jest 
+dobrze zabezpieczone przed niepowołanym fizycznym dostępem. Takie samo pomieszczenie znajduje się w budynku B i ma również nr 11. Obecnie nie jest
+używane. Właśnie w tych dwóch pomieszczeniach będą znajdować się urządzenia sieciowe oraz szafy krosownicze.
 
 Wszystkie komputery PC oraz inne urządzenia przyłączone do sieci posiadają interfejsy sieciowe ethernet i spełniają wymagania niezbędne
 do połączenia do nowej sieci. Spis programów używanych w firmie:
@@ -245,10 +247,10 @@ Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetW
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
 do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
-Firma w najbliższym czasie planuje zakup dodatkowych 4 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
+Firma w najbliższym czasie planuje zakup dodatkowych 5 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
 w ogólnie dostępnym miejscu.
 
-Firma w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
+ComputerBudy w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
 
 Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
