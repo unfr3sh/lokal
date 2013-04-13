@@ -126,9 +126,10 @@ z samymi pracownikami. Przepustowości łącz w nowej instalacji zostaną oszaco
 
 \chapter{Inwentaryzacja sprzętu i infrastruktury dostępnej w przedsiębiorstwie}
 Na podstawie udostępnionej dokumentacji oraz wizyt w budynku mieszczącym firmę opracowano zestawienie zasobów obecnie posiadanych przez firmę.
-W obecnej architekturze sieciowej razem w obu budynkach znajduje się 225 gniazdek ethernetowych. Całe obecne okablowanie wykonane jest 
-za pomocą nieekranowanej skrętki w kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
-bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare.
+W obecnej architekturze sieciowej razem w obu budynkach znajduje się 290 gniazdek ethernetowych. Nie wszystkie są obecnie używane.
+Całe obecne okablowanie wykonane jest za pomocą nieekranowanej skrętki kategorii 3. Jest to wyraźnie przestarzała technologia. W centrali znajduje się serwer realizujący usługę
+bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare. Pomieszczenie z serwerem posiada
+odzielną klimatyzacje oraz jest dobrze zabezpieczone przed niepowołanym fizycznym dostępem.
 
 Wszystkie komputery PC oraz inne urządzenia przyłączone do sieci posiadają interfejsy sieciowe ethernet i spełniają wymagania niezbędne
 do połączenia do nowej sieci. Spis programów używanych w firmie:
@@ -144,8 +145,6 @@ do połączenia do nowej sieci. Spis programów używanych w firmie:
  \item program księgowo kadrowy Płatnik
 \end{enumerate}
 
-Dodatkowo każdy dział ma dodatkowe oprogramowanie specyficzne dla funkcji jaką pełni. Specyfikacja ta zostanie sprecyzowana w następnym rozdziale.
-
 Budynki w których firma ma swoją siedzibę to nowoczesne biurowce. Wynajmujący piętro sam zagospodarowuje większość 
 znajdującej się tam przestrzeni za pomocą modułowej architektury boxów. Aby umożliwić dużą elastyczność konfiguracji przestrzennej piętra 
 wyposażone są w podwieszane sufity w których poprowadzono jest większość instalacji. Właśnie pod kątem tego montażu zostanie zaprojektowany plan
@@ -160,17 +159,47 @@ znacząco wpłynąć na parametry zasilania w sieci. Inne firmy, które prowadz�
 sprzętu biurowego połączonego kablową siecią ethernetową. Brak innych sieci bezprzewodowych w budynkach znacząco ułatwia implementacje sieci wifi
 ponieważ nie występuje problem interferencji międzykanałowych.
 
-%Trzba dodać orientacyjne oszacowanie ilości sprzętu.
-
-%Z umieszczeniem tych planów to trzeba się jeszcze zastanowić.
 \pagebreak[4]
-Plany budynków znajdują się w załączniku A. Wzajemne rozmieszczenie budynków przezentuje poniższy rysunek.
+\section{Plany budynków oraz ich wzajemne rozmieszczenie}
+%Plany budynków
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=\textwidth]{./obrazki/plany_wew/a0.png}
+\end{figure}
 
-%rysunek trzba poprawić
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=\textwidth]{./obrazki/plany_wew/a1.png}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=\textwidth]{./obrazki/plany_wew/b0.png}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=\textwidth]{./obrazki/plany_wew/b1.png}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=\textwidth]{./obrazki/plany_wew/b2.png}
+\end{figure}
+
+
+%wzajemne rozmieszczenie budynków
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{./obrazki/rzut_terenowy.png}
+    \caption{Wzajmne rozmieszczenie budynków na mapie.}
+\end{figure}
+
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/rozmieszczenie_budynkow.jpeg}
-  \caption{Wzajemne rozmieszczenie budynków.}
+    \caption{Wzajmne rozmieszczenie schemat.}
 \end{figure}
 
 
@@ -184,8 +213,8 @@ Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetW
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
 do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
-Firma w najbliższym czasie planuje zakup dodatkowych 4 drukarek sieciowych.Po jednej dodatkowej na każde piętro.
-W związku tymi planami należy zwiększyć liczbę gniazdek ethernetowych w instalacji do 229.
+Firma w najbliższym czasie planuje zakup dodatkowych 4 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
+w ogólnie dostępnym miejscu.
 
 Firma w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
@@ -200,7 +229,7 @@ sieciowego.
 Klient wyraził zapotrzebowanie na instalację sieci wifi dla działu obsługującego przedsiębiorców. W sali konferencyjnej często dochodzi  
 do spotkań z klientami oraz małych narad zarządu. Wygodny dostęp dla internetu na pewno byłby czynnikiem ułatwiającym wszelkie negocjacje.
 Niestety nie można przewidzieć zapotrzebowania na pasmo dla tego elementu sieci ponieważ nie wiadomo jaki program zechce uruchomić użytkownik.
-Nie jest to obciążenie ciągłe sieci więc odpowiedni zapas przepustowości w powinien rozwiązać ten problem.
+Nie jest to obciążenie ciągłe sieci więc odpowiedni zapas przepustowości powinien rozwiązać ten problem.
 
 Na podstawie zebranych danych można postawić wymagania dotyczące przepustowości sieci lokalnej oraz łącza z internetowego. Poniższa tabela
 prezentuje wymagania minimalne oraz zalecane. Wymagania minimalne zawierają wartości parametrów niezbędnych do poprawnego działania sieci. 
@@ -211,6 +240,54 @@ zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapase
 
 
 \chapter{Założenia projektowe}
+
+Na podstawie analizy potrzeb ComputerBudy, proponujemy
+następujące rozwiązania:
+
+\begin{itemize}
+
+\item{technologia Gigabit Ethernet wykorzystana w okablowaniu pionowym}
+
+\item{technologia Fast Ethernet wykorzystana w okablowaniu poziomym}
+
+\item{asymetryczne łącze z dostępem do Internetu o przepustowości ?? muszę policzyć}
+
+\item{strukturę sieci oddzielającą serwery lokalne od zewnętrznych:
+ \begin{itemize}
+\item serwer WWW,
+\item serwer Intranet,
+\item serwer bazy danych,
+%\item centrala PBX.
+\end{itemize}}
+
+\item {użycie kabla UTP z kategorii 6,}
+
+\item {urządzenia kompatybilne z IPv6 (router’y, switch’e, serwery),}
+
+\item{dedykowane urządzenia pod telefonię VoIP;
+W zależności od budżetu: telefony z możliwością przełączania (podłączenie
+komputera) lub bez tej możliwości (potrzeba zakupienia większej ilości
+przełączników)}
+
+\item{telefonia VoIP oparta na kodeku G.729 z priorytetyzowaniem pakietów w celu
+utrzymania odpowiedniego QoS,}
+
+\item{technologię VLAN w celu odseparowania jednostek organizacyjnych firmy}
+
+\item{ezprzewodowy dostęp do sieci w dziale obługi klienta biznesowego w technologii WiFi
+802.11g}
+
+\item{bezpieczeństwo sieci zapewnione sprzętowym firewall’em}
+
+\item{dodatkowo ochrona realizowana przez specyfikę technologii VLAN,}
+
+\item{redundantność oraz STP - w celu zapewnienia większej niezawodności sieci,}
+
+\item{skalowalność dzięki zhierarchizowanemu podziałowi warstw.}
+
+\end{itemize}
+
+
 \chapter{Projekt sieci}
 \section{Projekt logiczny sieci wraz z opisem koncepcji rozwiązania}
 \section{Konfiguracja adresacji IP}
