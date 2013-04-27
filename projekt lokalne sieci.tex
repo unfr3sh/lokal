@@ -6,6 +6,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{verbatim}
 
 \makeatletter
 
@@ -184,6 +185,7 @@ znacząco wpłynąć na parametry zasilania w sieci. Inne firmy, które prowadz�
 sprzętu biurowego połączonego kablową siecią ethernetową. Brak innych sieci bezprzewodowych w budynkach znacząco ułatwia implementacje sieci wifi
 ponieważ nie występuje problem interferencji międzykanałowych.
 
+
 \pagebreak[4]
 \section{Plany budynków oraz ich wzajemne rozmieszczenie}
 %Plany budynków
@@ -191,17 +193,18 @@ ponieważ nie występuje problem interferencji międzykanałowych.
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/a0.png}
 \end{figure}
-
+\begin{comment}
 \begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/a1.png}
 \end{figure}
-
+\end{comment}
 \begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b0.png}
 \end{figure}
 
+\begin{comment}
 \begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b1.png}
@@ -211,6 +214,7 @@ ponieważ nie występuje problem interferencji międzykanałowych.
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b2.png}
 \end{figure}
+\end{comment}
 
 
 %wzajemne rozmieszczenie budynków
@@ -262,27 +266,35 @@ Tabele reprezentują ilość danych wygenerowanych przez 1 użytkownika danego d
  
 \end{table}
 
+\begin{table}[H]
 
+\centering
+\caption{Planowana liczba gniazdek na piętro. \label{tab:gnizado na pietro}}
 
+\includegraphics[width=0.6\textwidth]{./obrazki/plany_wew/gniazda_na_pietro.png} 
+ 
+\end{table}
+
+%upieksz jakas ta tabele wyzej
 
 Wszyscy użytkownicy sieci korzystają z następujących programów: klient NetWare,Thunderbird, Firefox, Microsoft Office oraz Skype. Dodatkowo występuje 
 oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i kadry pracują dużo na Płatniku natomiast obsługa klienta używa programu
 do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
-Firma w najbliższym czasie planuje zakup dodatkowych 5 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
+\paragraph{Plany rozwoju}Firma w najbliższym czasie planuje zakup dodatkowych 5 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
 w ogólnie dostępnym miejscu.
 
-ComputerBudy w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
+\paragraph{Poufność danych}ComputerBudy w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
 
-Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
+\paragraph{Obciążenie serwera www}Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
 1 Mb/s do wysyłania. Wartości te będą uwzględnione dla wymagań dotyczących łącza internetowego.
 
-Codziennie od godziny 24:00 do 6:00 rano wykonywany jest backup bazy danych klientów. Aby został poprawnie wykonany wymagana jest przepustowość 
+\paragraph{Backup}Codziennie od godziny 24:00 do 6:00 rano wykonywany jest backup bazy danych klientów. Aby został poprawnie wykonany wymagana jest przepustowość 
 na poziomie 3 Mb/s. Ponieważ czynność ta wykonywana jest w nocy wymaganie to będzie na pewno spełnione gdyż pracownicy nie będą generować ruchu
 sieciowego.
 
-Klient wyraził zapotrzebowanie na instalację sieci wifi dla działu obsługującego przedsiębiorców. W sali konferencyjnej często dochodzi  
+\paragraph{Sieć wifi}Klient wyraził zapotrzebowanie na instalację sieci wifi dla działu obsługującego przedsiębiorców. W sali konferencyjnej często dochodzi  
 do spotkań z klientami oraz małych narad zarządu. Wygodny dostęp dla internetu na pewno byłby czynnikiem ułatwiającym wszelkie negocjacje.
 Niestety nie można przewidzieć zapotrzebowania na pasmo dla tego elementu sieci ponieważ nie wiadomo jaki program zechce uruchomić użytkownik.
 Nie jest to obciążenie ciągłe sieci więc odpowiedni zapas przepustowości powinien rozwiązać ten problem.
@@ -368,8 +380,8 @@ następujące rozwiązania:
 \begin{itemize}
 
 \item sprawdzić z check-list 
-\item plany budynków to nie inwentaryzacja, tylko planowana liczba gniazdek na podstawie info od admina
-\item "w inwentazyjacji opisujemy stan obecny"
+\item zrobić liczbe planowanych gniazdek w tabeli-zaraz zrobie
+
  
 \end{itemize}
 
