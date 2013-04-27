@@ -310,7 +310,6 @@ następujące rozwiązania:
 \item{strukturę sieci oddzielającą serwery lokalne od zewnętrznych:
  \begin{itemize}
 \item serwer WWW,
-\item serwer Intranet,
 \item serwer bazy danych,
 \end{itemize}}
 
@@ -338,6 +337,21 @@ następujące rozwiązania:
 
 \chapter{Projekt sieci}
 \section{Projekt logiczny sieci wraz z opisem koncepcji rozwiązania}
+\subsection{Ogólna koncepcja}
+
+Cała sieć zostanie podzielona na dwie strefy. Pierwsz zdemilitaryzowana w której będą znajdować się serwery WWW oraz bazy danych. 
+Zostaną one podłączone do przełącznka warstwy 2 za pomocą pomcą łączy o przepustowości 100Mb/s. Przełącznik z ruterem zostanie połączony 
+przy pomocy łącza o prędkości 1Gb/s. Druga będzie to wewnętrzna prywatna sieć firmy z komputerami pracowników oraz wewnętrzna sieć wifi firmy. 
+Strefa prywatna dla osiągnięcia większego poziomu bezpieczeństwa zostanie podzielona na wirtualne podsieci połączone za pomocą przełączników w warstwie 3. Każdy odział firmy
+oraz sieć wifi będzie stanowić osobną podsieć wirtualną. Każde piętro będzie posiadło swój przełącznik w warstwie 2 do którego będą
+dprowadzone połączneia z hostów znajdujących się na danym piętrze
+ o przepustowości 100Mb/s. W każdym budynku będzie znajdował się 1 switch obsługujący wirtuale sieci.
+Switche obsługujące poszczególne piętra oraz ruter będzie z nimi połączony za pomocą łączy o przepustowości 1Gb/s. Punkt dostępu wifi
+zostanie bezpośrednio podpięty do switcha  obsługującego vlany za pomocą łącza o przepustowości 1Gb/s.
+Połączenie do sieci internet zostanie odzielone za pomocą firewala dla zwiększenia
+bezpieczeństwa.
+
+
 \section{Konfiguracja adresacji IP}
 \section{Projekt okablowania}
 \section{Projekt podłączenia do Internetu}
