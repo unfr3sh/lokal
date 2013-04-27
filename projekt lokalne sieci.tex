@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{float}
 
 \makeatletter
 
@@ -85,7 +86,7 @@
 Projekt instalacji sieciowej jest realizowany dla firmy ComputerBudy. Siedziba która jest jednocześnie przedmiotem tego projektu znajduje się
 przy ulicy Szwajcarska 22 w Wrocławiu.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/adres_computerbudy.jpeg}
   \caption{Lokalizacja centrali firmy na mapie Wrocławia.}
@@ -104,7 +105,10 @@ przejęciem kontroli nad komputerem klienta podszywając się pod pracownika fir
 ComputerBudy wynajmuje łącznie 5 pięter w dwóch bliźniaczych budynkach stojących obok siebie.W pierwszym dwa i w następnym budynku kolejne 3.
 Pozostałe piętra wynajmują inne firmy.
 
-Celem naszej pracy jest stworzenie projektu nowej instalacji teleinformatycznej na użytkowanych przez firmę piętrach w obu budynkach. Zakres projektu:
+Celem naszej pracy jest stworzenie projektu nowej instalacji teleinformatycznej na użytkowanych przez firmę piętrach w obu budynkach.
+\pagebreak[4]
+
+ Zakres projektu:
 \begin{itemize}
 \item{Inwentaryzacja sprzętu i infrastruktury dostępnej w przedsiębiorstwie}
 \item{Analiza potrzeb użytkowników – wymagania zamawiającego}
@@ -166,27 +170,27 @@ ponieważ nie występuje problem interferencji międzykanałowych.
 \pagebreak[4]
 \section{Plany budynków oraz ich wzajemne rozmieszczenie}
 %Plany budynków
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/a0.png}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/a1.png}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b0.png}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b1.png}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=\textwidth]{./obrazki/plany_wew/b2.png}
 \end{figure}
@@ -194,13 +198,13 @@ ponieważ nie występuje problem interferencji międzykanałowych.
 
 %wzajemne rozmieszczenie budynków
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.5\textwidth]{./obrazki/rzut_terenowy.png}
     \caption{Wzajemne rozmieszczenie budynków na mapie.}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/rozmieszczenie_budynkow.jpeg}
     \caption{Wzajemne rozmieszczenie schemat.}
@@ -213,7 +217,7 @@ Na podstawie danych dostarczonych przez firmowego administratora sieci sporządz
 pracownicy w ciągu dnia roboczego. Przedstawiają je tabela 
 \ref{tab:analiza dzialy} oraz \ref{tab:analiza podsumowanie}.
 
-\begin{table}
+\begin{table}[H]
 
 \centering
 \caption{Analiza ruchu sieciowego w poszczególnych departamentach. \label{tab:analiza dzialy}}
@@ -227,7 +231,7 @@ pracownicy w ciągu dnia roboczego. Przedstawiają je tabela
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
 
 \centering
 \caption{Podsumowanie generowanego ruchu. \label{tab:analiza podsumowanie}}
@@ -271,7 +275,7 @@ Niestety gdyby ich użyć mogłyby wystąpić problemy z jakością usług gdyby
 zalecanych, które stanowią trzykrotność wartości minimalnej. Z takim zapasem przepustowości sieć będzie odporna na większość przeciążeń.
 
 
-\begin{table}
+\begin{table}[H]
 \caption{Przepustowości łącza internetowego. }
 \label{tab:parametry_loncza}
  \centering
