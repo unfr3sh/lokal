@@ -359,17 +359,17 @@ następujące rozwiązania:
 \section{Projekt logiczny sieci wraz z opisem koncepcji rozwiązania}
 \subsection{Ogólna koncepcja}
 
-Cała sieć zostanie podzielona na dwie strefy. Pierwsz zdemilitaryzowana w której będą znajdować się serwery WWW oraz bazy danych. 
-Zostaną one podłączone do przełącznka warstwy 2 za pomocą pomcą łączy o przepustowości 100Mb/s. Przełącznik z ruterem zostanie połączony 
+Cała sieć zostanie podzielona na dwie strefy. Pierwsza zdemilitaryzowana w której będą znajdować się serwery WWW oraz bazy danych. 
+Zostaną one podłączone do przełącznika warstwy 2 za pomocą pomocą łączy o przepustowości 100Mb/s. Przełącznik z ruterem zostanie połączony 
 przy pomocy łącza o prędkości 1Gb/s. Druga będzie to wewnętrzna prywatna sieć firmy z komputerami pracowników oraz wewnętrzna sieć wifi firmy. 
 Strefa prywatna dla osiągnięcia większego poziomu bezpieczeństwa zostanie podzielona na wirtualne podsieci połączone za pomocą przełączników w warstwie 3. Każdy odział firmy
 oraz sieć wifi będzie stanowić osobną podsieć wirtualną. Każde piętro będzie posiadło swój przełącznik w warstwie 2 do którego będą
-dprowadzone połączneia z hostów znajdujących się na danym piętrze
- o przepustowości 100Mb/s. W każdym budynku będzie znajdował się 1 switch obsługujący wirtuale sieci.
-Switche obsługujące poszczególne piętra oraz ruter będzie z nimi połączony za pomocą łączy o przepustowości 1Gb/s. Punkt dostępu wifi
-zostanie bezpośrednio podpięty do switcha  obsługującego vlany za pomocą łącza o przepustowości 100Mb/s.
-Połączenie do sieci internet zostanie odzielone za pomocą firewala dla zwiększenia
-bezpieczeństwa.
+doprowadzone połączenia z hostów znajdujących się na danym piętrze o przepustowości 100Mb/s.
+Punkt dostępu wifi zostanie  podpięty do normalnego switcha również łączem o przepustowości 100Mb/s. W każdym budynku będzie znajdował 
+się 1 switch obsługujący wirtualne sieci. Switche obsługujące poszczególne piętra oraz ruter będzie z nimi połączony za pomocą łączy o przepustowości 1Gb/s.
+Switch warstwy 3 z budynku A będzie podłczony do odpowiadającego mu swicha w budynku B. Właśnie to połączenie będzie przebiegać pomiędzy budynkami. Oczywiście
+będzie ono miało przepustowość 1Gb/s. Switch warstwy 3 w budynku B będzie podłączony do rutera również takim złączem. 
+Połączenie do sieci internet zostanie oddzielone za pomocą firewala dla zwiększenia bezpieczeństwa.
 
 \subsection{Toplogia sieci}
 \begin{figure}[H]
@@ -387,7 +387,7 @@ bezpieczeństwa.
 
 \section{Konfiguracja adresacji IP}
 \subsection{Podział na VLAN}
-Jak już wcześniej było wspomniane tworzona przez nas sieć ma zapewniać bezpieczeństwo oraz łatwą kofigurowalność sieci.
+Jak już wcześniej było wspomniane tworzona przez nas sieć ma zapewniać bezpieczeństwo oraz łatwą adaptacje sieci do nowych warunków.
 Jedną z metod jakie wybraliśmy do uzyskania tego jest VLAN. Uzyskamy dzięki tej technologi separacja pomiędzy poszczególnymi
 sekcjami firmy. Ponadto umożliwi to łatwe zarządzanie ruchem przez administratora. Podział sieci firmowej za pomocą VLAN przedstawia tabela \ref{table:konf_vlan}.
 
@@ -398,12 +398,12 @@ sekcjami firmy. Ponadto umożliwi to łatwe zarządzanie ruchem przez administra
       \includegraphics[width=0.8\textwidth]{./obrazki/ip/ip_vlan.png}
 \end{table}
 
-Podzczas adresacji w tabeli \ref{table:konf_vlan} celowo został ominięty VLAN 1 aby była możliwa wspołpraca z urządzeniami z firmy CISCO.
-Urządzenia tej firmy  obsługującye technologię VLAN, domyślnie tworzą sieć VLAN 1, która odpowiada za zarządzanie utworzoną siecią i za
+Podczas adresacji w tabeli \ref{table:konf_vlan} celowo został ominięty VLAN 1 aby była możliwa współpraca z urządzeniami z firmy CISCO.
+Urządzenia tej firmy  obsługujące technologię VLAN, domyślnie tworzą sieć VLAN 1, która odpowiada za zarządzanie utworzoną siecią i za
  przekazywanie komunikatów w różnych protokołach.
 
 \subsection{Adresacja w strefie DMZ}
-Adresy w strefie DMZ zostały szczegółowo wyspecyfikowane w tabeli \ref{table:konf_dmz} aby administartor sieci mógł dokładnie kontrolować ruch płynący na posczególne serwery.
+Adresy w strefie DMZ zostały szczegółowo określone w tabeli \ref{table:konf_dmz} aby administrator sieci mógł dokładnie kontrolować ruch płynący na poszczególne serwery.
 \begin{table}[H]
 \caption{Adresy przypisane do poszczególnych serwerów w strefie DMZ.}
 \label{table:konf_dmz}
@@ -412,8 +412,8 @@ Adresy w strefie DMZ zostały szczegółowo wyspecyfikowane w tabeli \ref{table:
 \end{table}
 
 \subsection{Adresacja interfejsów rutera}
-Prawidłowa konfiguracja interfejsów fizycznych jak i wirtualnych ma kluczowe znaczenie dla poprawności dzialania sieci. Została ona szczegółowa wypisana
-dla poszcególnych interfejsów w tabeli \ref{table:konf_ruter_interface}. Użyto oznaczeń charakterystycznych dla firmy CISCO ponieważ są ogólnie znane i dośc 
+Prawidłowa konfiguracja interfejsów fizycznych jak i wirtualnych ma kluczowe znaczenie dla poprawności działania sieci. Została ona szczegółowa wypisana
+dla poszczególnych interfejsów w tabeli \ref{table:konf_ruter_interface}. Użyto oznaczeń charakterystycznych dla firmy CISCO ponieważ są ogólnie znane i dość 
 intuicyjne.
 \begin{table}[H]
 \caption{Adresy przypisane do intefejsów rutera.}
@@ -439,14 +439,5 @@ intuicyjne.
 %  \caption{Geograficzne rozmieszczenie odziałów firmy.}
 %\end{figure}
 
-\chapter*{notatki}
-
-\begin{itemize}
-
-\item sprawdzić z check-list 
-\item zrobić liczbe planowanych gniazdek w tabeli-zaraz zrobie
-
- 
-\end{itemize}
 
 \end{document}
