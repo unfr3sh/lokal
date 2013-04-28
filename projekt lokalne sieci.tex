@@ -283,7 +283,7 @@ oprogramowanie specjalistyczne dla wyszczególnionych działów. Księgowość i
 do zdalnego zarządzania innymi komputerami TeamViever oraz ssh.
 
 \paragraph{Plany rozwoju}Firma w najbliższym czasie planuje zakup dodatkowych 5 drukarek sieciowych.Po jednej dodatkowej na każde piętro. Drukarki te mają znajdować się
-w ogólnie dostępnym miejscu.
+w ogólnie dostępnym miejscu. Zakup drukarek nie jest częścią tego projektu. W planie sieci ma być jedynie uwzględnione miejsce oraz adresacja dla tych urządzeń.
 
 \paragraph{Poufność danych}ComputerBudy w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
@@ -365,7 +365,8 @@ przy pomocy łącza o prędkości 1Gb/s. Druga będzie to wewnętrzna prywatna s
 Strefa prywatna dla osiągnięcia większego poziomu bezpieczeństwa zostanie podzielona na wirtualne podsieci połączone za pomocą przełączników w warstwie 3. Każdy odział firmy
 oraz sieć wifi będzie stanowić osobną podsieć wirtualną. Każde piętro będzie posiadło swój przełącznik w warstwie 2 do którego będą
 doprowadzone połączenia z hostów znajdujących się na danym piętrze o przepustowości 100Mb/s.
-Punkt dostępu wifi zostanie  podpięty do normalnego switcha również łączem o przepustowości 100Mb/s. W każdym budynku będzie znajdował 
+Punkt dostępu wifi zostanie  podpięty do normalnego switcha również łączem o przepustowości 100Mb/s. Wszystkie switche opreujące
+w warstwie 2 będą zbudowane przy pomocy funkcji stackable. W każdym budynku będzie znajdował 
 się 1 switch obsługujący wirtualne sieci. Switche obsługujące poszczególne piętra oraz ruter będzie z nimi połączony za pomocą łączy o przepustowości 1Gb/s.
 Switch warstwy 3 z budynku A będzie podłczony do odpowiadającego mu swicha w budynku B. Właśnie to połączenie będzie przebiegać pomiędzy budynkami. Oczywiście
 będzie ono miało przepustowość 1Gb/s. Switch warstwy 3 w budynku B będzie podłączony do rutera również takim złączem. 
@@ -377,6 +378,12 @@ Połączenie do sieci internet zostanie oddzielone za pomocą firewala dla zwię
       \includegraphics[width=0.9\textwidth]{./obrazki/topo_log.png}
   \caption{Topologia logiczna sieci.}
 \end{figure}
+
+\begin{table}[H]
+\caption{Proponowane modele urządzeń.\label{table:proponowane_urzadzenia}}
+ \centering
+      \includegraphics[width=0.8\textwidth]{./obrazki/spis_przyrzadow.png}
+\end{table}
 
 \subsection{Projekt podziału na VLAN}
 \begin{figure}[H]
