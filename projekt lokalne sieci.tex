@@ -146,8 +146,8 @@ odzyskane elementy sprzedać. Działania te ma wykonać firma instalacyjna.
 
 
 
-W centrali znajduje się serwer realizujący usługę
-bazy danych, serwera FTP oraz hostujący stronę internetową firmy. Serwer działa pod kontrolą systemu NetWare. Znajduje się on w
+W centrali znajdują się 2 serwery. Pierwszy realizuje usługę
+bazy danych natomiast drugi hostuje stronę internetową firmy. Serwery działają pod kontrolą systemu NetWare. Znajdują się on w
 pomieszczeniu nr 11 w budynku A. Pokój ten jest specjalnie przystosowany, posiada oddzielną klimatyzacje oraz jest 
 dobrze zabezpieczone przed niepowołanym fizycznym dostępem. Takie samo pomieszczenie znajduje się w budynku B i ma również nr 11. Obecnie nie jest
 używane. Właśnie w tych dwóch pomieszczeniach będą znajdować się urządzenia sieciowe oraz szafy krosownicze.
@@ -291,8 +291,8 @@ w ogólnie dostępnym miejscu. Zakup drukarek nie jest częścią tego projektu.
 \paragraph{Poufność danych}ComputerBudy w swojej bazie danych posiada nie tylko dane personalne swoich pracowników ale również klucze kryptograficzne wymagane do połączenia zdalnego
 z maszyną klienta. Dane te są newralgiczne dla firmy. W związku z tym trzeba będzie w sieci koniecznie zastosować urządzenie typu firewall.
 
-\paragraph{Obciążenie serwera www}Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
-1 Mb/s do wysyłania. Wartości te będą uwzględnione dla wymagań dotyczących łącza internetowego.
+\paragraph{Serwer www}Serwer na którym jest umieszczona strona firmy do poprawnego obsługiwania zapytań potrzebuje łącze o przepustowości 0,5 Mb/s do pobierania oraz
+1 Mb/s do wysyłania.  Wartości te będą uwzględnione dla wymagań dotyczących łącza internetowego. Dostęp z zewnątrz do serwera ma być realizowany przy pomocy mechanizmu port forwarding.
 
 \paragraph{Backup}Codziennie od godziny 24:00 do 6:00 rano wykonywany jest backup bazy danych klientów. Aby został poprawnie wykonany wymagana jest przepustowość 
 na poziomie 3 Mb/s. Ponieważ czynność ta wykonywana jest w nocy wymaganie to będzie na pewno spełnione gdyż pracownicy nie będą generować ruchu
@@ -453,9 +453,9 @@ intuicyjne.
 \item rysunek źle sie wyświetla - done
 \item baza danych wewnątrz - done
 \item sw3 na legendzie - done
-\item sw3 jako brama 
+\item sw3 jako brama -zmienione do weryfikacji
 \item definicja punktu abonenckiego i gniazda( co podwójne)- dałem podwójne. Nie wiem jak to wpłynie na pozostały sprzęt. Do weryfikacji.
-\item strona ma mieć zew. ip
+\item strona ma mieć zew. ip -wystawianie portu do weryfikacji w paragrafie Serwer www
 \item światłowód między budynkami - done, ale wybrane urządzenia tego nie maja,
 
  \end{itemize}
