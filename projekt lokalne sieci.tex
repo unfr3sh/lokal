@@ -351,8 +351,6 @@ następujące rozwiązania:
 
 \item{dodatkowo ochrona realizowana przez specyfikę technologii VLAN,}
 
-\item{redundantność oraz STP - w celu zapewnienia większej niezawodności sieci,}
-
 \item{skalowalność dzięki zhierarchizowanemu podziałowi warstw.}
 
 \end{itemize}
@@ -435,7 +433,76 @@ intuicyjne.
 
 \section{Projekt okablowania}
 \section{Projekt podłączenia do Internetu}
+
 \section{Analiza bezpieczeństwa i niezawodności sieci}
+Sieć komputerowa narażona jest na szereg niebezpieczeństw.Zaczynając od 
+najprostszych awarii sprzętu a kończąc na celowym ataku na infrastktuę i dane biznesowe.
+Proponowany przez nas projekt sieci zapewnia dodatkową odporność na następujące zagrożenia:
+\begin{itemize}
+
+
+\item{Złośliwe oprogramowanie}
+
+Pierwszą linią obrony jest użycie ściany ogniowej
+w routerze podłączonym do internetu a urządzeniami pośrednimi oraz
+końcowymi. Kolejnym  zabezpieczeniem
+jest użycie sieci wirtualnych VLAN. Uniemożliwiają one rozprzestrzenienie się złośliwego oprogramowania na całą sieć.           
+
+Powyższe zabezpieczenia nie zwalniają firmy z obowiązku korzystania z 
+aktualnych programów antywirusowych oraz szkolenia pracowników na temat zagrożeń w sieci.
+
+\item {Ataki oraz włamania do sieci}
+
+Po raz kolejny pierwszą linią obrony jest zapora ogniowa,
+która może zabronić dostępu do sieci informacjom podejrzanym lub
+szkodliwym. 
+
+Kolejnym mechanizmem obronnym w tym przypaduku jest strefa zdemilitaryzowana w której umieszczono serwer www.
+Mimo, że  włamanie zakończy się sukcesem to nie wiąże się z
+narażeniem firmy na penetracje wewnętrznych zasobów i znaczące straty.
+
+\item {Zabezpieczenie sieci  WiFi}
+
+W celu zapewnienia jak największego bezpieczeństwa sieci
+WiFi, na terenie firmy, wprowadzono potrzebę autentyzacji
+użytkownika przez podanie hasła podczas logowania. Transmisja będzie szyfrowana za pomocą metody WPA2 Enterprise.
+
+Dodatkowo zmniejszenie mocy sygnału sieci do poziomu umożliwiającego korzystanie z niej tylko w obrębie budynku
+uniemożliwi osobom postronnym podsłuchiwanie transmisjii.
+
+\item Awaria Zasilania.
+
+Sieć stworzona na potrzeby firmy wymaga do działania energii
+elektrycznej i jest od niej całkowicie zależna. Aby przeciwdziałać skutkom braku energii,zaleca się zakup zasilaczy UPS.
+Umożliwią one bezpieczne wyłączenie serwerów bez utraty danych. Informację przechowywane lokalnie na
+każdym z komputerów nie podlegają takiej ochronie.
+
+\item {Awaria serwerów}
+
+Aby zapobiec trwałej utracie danych, każdej doby, w godzinach nocnych firma wykonuje backup bazy danych na
+zewnętrzne serwery.Zalecane są również prace serwisowe na  sprzęcie
+mają zminimalizować ryzyko wystąpienia awarii nośników danych.
+
+\item {Zakłócenia EMC}
+
+Mimo że środowisko EMC w ktorym znajduje się firma nie jest zbytno zanieczyszczone należy zastosować środki zapobiegawcze
+aby sieć mogła służyć zamawiającemu przez długi czas.Sprzęt użyty do
+stworzenia sieci lokalnej firmy oraz okablowanie musi spełniać wszystkie normy ISO
+oraz pochodzić od sprawdzonej firmy.
+
+Najbardziej narażonym na zakłócenia jest zewnętrzny odcinek sieci poprowadzony między budynkami. W dodatku jest to krytyczne miejsce. 
+Aby zapwenić maksimumu ochrony w projekcie użyliśmy najbardziej odpornego na zakłócenia medium czyli światłowodu.
+
+
+\item {Ograniczenia dostępu fizycznego do urządzeń}
+
+Pomieszczenie, które wybraliśmy do umieszczenia sprzętu sieciowego jest specjalnie przystosowane.
+Zamknięte jest za pomocą solidnych drzwi z skomplikowanym zamkiem ponadto nie posiada okna. Chłodzenie jest w nim
+realizwoane za pomocą specjalnej wentylacji.Dodatkowo urządzenia zamontowane są w szafach zamykanych na klucz. 
+Dostęp do nich posiadają jedynie autoryzowane osoby.
+
+\end{itemize}
+
 \section{Kosztorys urządzeń}
 
 %Otoczenie tabelki
