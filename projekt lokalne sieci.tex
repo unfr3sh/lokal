@@ -151,7 +151,7 @@ W centrali znajdują się 2 serwery. Pierwszy realizuje usługę
 bazy danych natomiast drugi hostuje stronę internetową firmy. Serwery działają pod kontrolą systemu NetWare. Znajdują się on w
 pomieszczeniu nr 11 w budynku A. Pokój ten jest specjalnie przystosowany, posiada oddzielną klimatyzacje oraz jest 
 dobrze zabezpieczone przed niepowołanym fizycznym dostępem. Takie samo pomieszczenie znajduje się w budynku B i ma również nr 11. Obecnie nie jest
-używane. Właśnie w tych dwóch pomieszczeniach będą znajdować się urządzenia sieciowe oraz szafy krosownicze.
+używane. Właśnie w tych dwóch pomieszczeniach będą znajdować się urządzenia sieciowe oraz panele krosownicze.
 
 \paragraph{Sprzęt}
 
@@ -220,7 +220,7 @@ ponieważ nie występuje problem interferencji międzykanałowych.
 
 
 %wzajemne rozmieszczenie budynków
-\section{Wzajmne położenie budynków}
+\section{Wzajemne położenie budynków}
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.5\textwidth]{./obrazki/rzut_terenowy.png}
@@ -268,8 +268,8 @@ Tabele reprezentują ilość danych wygenerowanych przez 1 użytkownika danego d
  
 \end{table}
 
-\paragraph{Punkt abonencki} Liczba punktów abonenckich została przedstawiona w tabeli \ref{table:gniazda na pietro}.Pojedyńczy punkt
-abonnencki będzie składał sie z dwóch gniazd RJ45. Jedno przeznaczone dla komputera natomiast drugie dla przyszłych zastosowań.
+\paragraph{Punkt abonencki} Liczba punktów abonenckich została przedstawiona w tabeli \ref{table:gniazda na pietro}.Pojedynczy punkt
+abonencki będzie składał sie z dwóch gniazd RJ45. Jedno przeznaczone dla komputera natomiast drugie dla przyszłych zastosowań.
 
 \begin{table}[H]
 
@@ -369,7 +369,7 @@ przy pomocy łącza o prędkości 1Gb/s. Druga będzie to wewnętrzna prywatna s
 Strefa prywatna dla osiągnięcia większego poziomu bezpieczeństwa zostanie podzielona na wirtualne podsieci połączone za pomocą przełączników w warstwie 3. Każdy odział firmy
 oraz sieć wifi będzie stanowić osobną podsieć wirtualną. Każde piętro będzie posiadło swój przełącznik w warstwie 2 do którego będą
 doprowadzone połączenia z hostów znajdujących się na danym piętrze o przepustowości 100Mb/s.
-Punkt dostępu wifi zostanie  podpięty do normalnego switcha również łączem o przepustowości 100Mb/s. Wszystkie switche opreujące
+Punkt dostępu wifi zostanie  podpięty do normalnego switcha również łączem o przepustowości 100Mb/s. Wszystkie switche operujące
 w warstwie 2 będą zbudowane przy pomocy funkcji stackable. W każdym budynku będzie znajdował 
 się 1 switch obsługujący wirtualne sieci. Switche obsługujące poszczególne piętra oraz ruter będzie z nimi połączony za pomocą łączy o przepustowości 1Gb/s.
 Switch warstwy 3 z budynku A będzie podłczony do odpowiadającego mu swicha w budynku B. Właśnie to połączenie będzie przebiegać pomiędzy budynkami. Oczywiście
@@ -401,7 +401,6 @@ Połączenie do sieci internet zostanie oddzielone za pomocą firewala dla zwię
 Jak już wcześniej było wspomniane tworzona przez nas sieć ma zapewniać bezpieczeństwo oraz łatwą adaptacje sieci do nowych warunków.
 Jedną z metod jakie wybraliśmy do uzyskania tego jest VLAN. Uzyskamy dzięki tej technologi separacja pomiędzy poszczególnymi
 sekcjami firmy. Ponadto umożliwi to łatwe zarządzanie ruchem przez administratora. Podział sieci firmowej za pomocą VLAN przedstawia tabela \ref{table:konf_vlan}.
-% u mnie w pdf'ie tu dwa pytajniki są ??
 
 \begin{table}[H]
 \caption{Podział sieci firmowej na poszczególne VLANY}
@@ -516,7 +515,7 @@ intuicyjne. Wartość 3 oktetu w adresie ip przydzielonym do interfejsu odpowiad
 \subsection{Przyporządkowanie interfejsów}
 
 Switche są konstruowane z pomocą technologii stackable. Poszczególne moduły tego samego stosu są zaznaczone innymi kolorami.
-Gniazda krosownic są przypożądkowane w taki sam sposób jak gniazda abonenckie do poszczególnych switchy.
+Gniazda krosownic są przyporządkowane w taki sam sposób jak gniazda abonenckie do poszczególnych switchy.
 
 \begin{table}[H]
 \caption{Przyporządkowanie gniazd na parterze w budynku a do interfejsów switcha.}
