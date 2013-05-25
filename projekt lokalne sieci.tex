@@ -426,7 +426,7 @@ Adresy w strefie DMZ zostały szczegółowo określone w tabeli \ref{table:konf_
 \subsection{Adresacja interfejsów }
 Prawidłowa konfiguracja interfejsów fizycznych jak i wirtualnych ma kluczowe znaczenie dla poprawności działania sieci. Została ona szczegółowa wypisana
 dla poszczególnych interfejsów w poniższych tabelach. Użyto oznaczeń charakterystycznych dla firmy CISCO ponieważ są ogólnie znane i dość 
-intuicyjne.
+intuicyjne. Wartość 3 oktetu w adresie ip przydzielonym do interfejsu odpowiada numerowi sieci VLAN i jest zgodna z schematem \ref{table:konf_vlan}.
 
 \begin{table}[H]
 \caption{Adresy ip przypisane do interfejsów dla rutera.}
@@ -683,11 +683,20 @@ Dostęp do nich posiadają jedynie autoryzowane osoby.
 \section{Kosztorys urządzeń}
 
 \begin{table}[H]
+\caption{Koszty zakupu sprzętu sieciowego oraz elementów dystrybucyjnych.}
+\label{table:koszty_sprzet}
+ \centering
+      \includegraphics[width=0.8\textwidth]{./obrazki/koszty/koszty_sprzet.png}
+\end{table}
+
+\begin{table}[H]
 \caption{Koszty comiesięczne ponoszone przez firmę.}
 \label{table:koszty_loncze}
  \centering
       \includegraphics[width=0.8\textwidth]{./obrazki/koszty/koszty_loncze.png}
 \end{table}
+
+
 
 %Otoczenie tabelki
 %\begin{table}
