@@ -425,13 +425,25 @@ Adresy w strefie DMZ zostały szczegółowo określone w tabeli \ref{table:konf_
 
 \subsection{Adresacja interfejsów }
 Prawidłowa konfiguracja interfejsów fizycznych jak i wirtualnych ma kluczowe znaczenie dla poprawności działania sieci. Została ona szczegółowa wypisana
-dla poszczególnych interfejsów w tabeli \ref{table:konf_ruter_interface}. Użyto oznaczeń charakterystycznych dla firmy CISCO ponieważ są ogólnie znane i dość 
+dla poszczególnych interfejsów w poniższych tabelach. Użyto oznaczeń charakterystycznych dla firmy CISCO ponieważ są ogólnie znane i dość 
 intuicyjne.
+
 \begin{table}[H]
-\caption{Adresy przypisane do interfejsów.}
-\label{table:konf_ruter_interface}
+\caption{Adresy ip przypisane do interfejsów dla rutera.}
  \centering
-      \includegraphics[width=0.8\textwidth]{./obrazki/ip/ip_ruter.png}
+      \includegraphics[width=0.6\textwidth]{./obrazki/ip/br0.png}
+\end{table}
+
+\begin{table}[H]
+\caption{Adresy ip przypisane do interfejsów switcha warstwy 3 w budynku B.}
+ \centering
+      \includegraphics[width=0.6\textwidth]{./obrazki/ip/bs3.png}
+\end{table}
+
+\begin{table}[H]
+\caption{Adresy ip przypisane do interfejsów switcha warstwy 3 w budynku A.}
+ \centering
+      \includegraphics[width=0.6\textwidth]{./obrazki/ip/as3.png}
 \end{table}
 
 \section{Projekt okablowania}
@@ -504,6 +516,7 @@ intuicyjne.
 \subsection{Przyporządkowanie interfejsów}
 
 Switche są konstruowane z pomocą technologii stackable. Poszczególne moduły tego samego stosu są zaznaczone innymi kolorami.
+Gniazda krosownic są przypożądkowane w taki sam sposób jak gniazda abonenckie do poszczególnych switchy.
 
 \begin{table}[H]
 \caption{Przyporządkowanie gniazd na parterze w budynku a do interfejsów switcha.}
@@ -669,6 +682,13 @@ Dostęp do nich posiadają jedynie autoryzowane osoby.
 
 \section{Kosztorys urządzeń}
 
+\begin{table}[H]
+\caption{Koszty comiesięczne ponoszone przez firmę.}
+\label{table:koszty_loncze}
+ \centering
+      \includegraphics[width=0.8\textwidth]{./obrazki/koszty/koszty_loncze.png}
+\end{table}
+
 %Otoczenie tabelki
 %\begin{table}
  % \caption{Geograficzne rozmieszczenie odziałów firmy.}
@@ -681,7 +701,7 @@ Dostęp do nich posiadają jedynie autoryzowane osoby.
 %  \caption{Geograficzne rozmieszczenie odziałów firmy.}
 %\end{figure}
 \begin{enumerate}
- \item Dodać na opisie tabelek połączeń że gniazdko do panela krosowniczego tak samo 1:1
+ \item Dodać na opisie tabelek połączeń że gniazdko do panela krosowniczego tak samo 1:1- zrobione (Gniazda krosownic są przypożądkowane w taki sam sposób jak gniazda abonenckie do poszczególnych switchy.)
 \item Zaznaczyć na rysunkach szaf rakowych który switch jest który tak aby nie było niedomówień.
 \end{enumerate}
 
